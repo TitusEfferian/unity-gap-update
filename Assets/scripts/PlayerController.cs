@@ -6,11 +6,14 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float turnSpeed = 10;
     [SerializeField] private float accelerationRate = 10f;
     [SerializeField] private float decelerationRate = 15f;
+    
 
     private float horizontalInput;
     private float currentSpeed;
     private float forwardInput;
     private Rigidbody rigidBody;
+
+    public float CurrentSpeed => currentSpeed;
     void Awake()
     {
         rigidBody = GetComponent<Rigidbody>();
